@@ -1,0 +1,8 @@
+---
+- name: Pull docker image of Lab3Junit
+  hosts: all
+  tasks:
+    - name: Pull calc devops image
+      docker_image:
+        name: sujit0892/calc
+        source: pull
