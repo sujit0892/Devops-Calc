@@ -11,7 +11,18 @@ public class Calculator {
         }
         return fact;
     }
+
     public static double power(int a,int b){
         return java.lang.Math.pow(a,b);
     }
+
+    public static double Log(int a){
+        return java.lang.Math.log(a);
+    }
+
+    public static double sqrt(int a){
+        return java.lang.Math.sqrt(a);
+    }
+
+
 }
