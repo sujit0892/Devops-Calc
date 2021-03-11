@@ -24,11 +24,11 @@ public class Calculator {
                             break;
                         case 3: System.out.print("Enter a number: ");
                             a = sc.nextLong();
-                            System.out.println(log(a)+"\n");
+                            System.out.println(log(a));
                             break;
                         case 4: System.out.print("Enter a number: ");
                             a = sc.nextLong();
-                            System.out.println(sqrt(a)+"\n");
+                            System.out.println(sqrt(a));
                             break;
                         case 5: System.exit(0);
                             break;
@@ -41,6 +41,11 @@ public class Calculator {
                     System.out.println("Wrong Input");
 
                 }
+                catch (IllegalArgumentException e)
+                {
+                    System.out.println("Input cant be negative");
+                }
+
 
             }
 
@@ -49,6 +54,8 @@ public class Calculator {
     }
 
     public static long fact(long n){
+        if(n<0)
+            throw new IllegalArgumentException();
         long fact=1;
         for(long i=1;i<=n;i++){
             fact=fact*i;
@@ -61,12 +68,17 @@ public class Calculator {
     }
 
     public static double log(long a){
+        if(a<0)
+            throw new IllegalArgumentException();
         return java.lang.Math.log(a);
     }
 
     public static double sqrt(long a){
+        if(a<0)
+            throw new IllegalArgumentException();
         return java.lang.Math.sqrt(a);
     }
+
 
 
 
